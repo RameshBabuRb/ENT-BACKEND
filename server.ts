@@ -32,7 +32,7 @@ app.use(logRequest)
 setupRoutes(app)
 
 app.get('/', (req: Request, res: Response) => {
-    res.send(successPage);
+     res.status(200).json({ message: "connected" })
 });
 sequelize
     .authenticate()
